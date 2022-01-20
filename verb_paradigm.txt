@@ -1,0 +1,52 @@
+VERB 1 hambal_speak
+nag-hambal:speak+V+ActV+Pfv+Ind
+naga-hambal:speak+V+ActV+Cont+Ind
+mag-hambal:speak+V+ActV+Ctpl+Ind
+maga-hambal:speak+V+ActV+Ctpl+Cont+Ind
+gin-hambal:speak+V+ObjV+Pfv+Ind
+gina-hambal:speak+V+ObjV+Cont+Ind
+hambal-on:speak+V+ObjV+Ctpl+Ind
+paga-hambal-on:speak+V+ObjV+Ctpl+Cont+Ind
+i-hambal:speak+V+InsV+Ctpl+Ind
+iga-hambal:speak+V+InsV+Ctpl+Cont+Ind
+gin-hambal-an:speak+V+RecV+Pfv+Ind
+gina-hambal-an:speak+V+RecV+Cont+Ind
+hambal-an:speak+V+RecV+Ctpl+Ind
+paga-hambal-an:speak+V+RecV+Ctpl+Cont+Ind
+naka-hambal:speak+V+ActV+Pfv+Pot
+maka-hambal:speak+V+ActV+Ctpl+Pot
+na-hambal:speak+V+ObjV+Pfv+Pot
+ma-hambal:speak+V+ObjV+Ctpl+Pot
+na-hambal-an:speak+V+RecV+Pfv+Pot
+ma-hambal-an:speak+V+RecV+Ctpl+Pot
+nang-hambal:speak+V+ActV+Pfv+Hab
+mang-hambal:speak+V+ActV+Ctpl+Hab
+nakig-hambal:speak+V+ActV+Pfv+Coop
+makig-hambal:speak+V+ActV+Ctpl+Coop
+pag-hambal:speak+V+Ger
+hambal-a:speak+V+ObjV+Imp
+hambal-i:speak+V+RecV+Imp
+pag-hambal-a:speak+V+ObjV+Proh
+pag-hambal-i:speak+V+RecV+Proh
+
+pang-hambal:speak+V+Hab
+pakig-hambal:speak+V+Coop
+pa-hambal:speak+V+Caus
+ka-hambal:speak+V+Stat
+hambal-anay:speak+V+Recip
+h-in-ambal:speak+V+Iter
+(h)ulu-hambal:speak+V+Dim
+h-alal-ambal:speak+V+Pl
+h-al-ambal:speak+V+Pl
+hambal-hambal:speak+V+(Red)
+
+QUESTIONS
+How to list all the affixes that can combine agglutinatively with the others
+paka- (even thought it's pa+ka, should it have its own entry?)
+-hon (how am I going to indicate the presence of glottal stops?)
+Should I list the indicative mood even though it's the default?
+Is it easier/better to split the affixes? a- (continuous aspect), gin- (all passive voices) and -an (applicative)
+Abbreviations? ga-, ka-, -ay (not yet included)
+What about the i- instrumental imperative? (same form as indicative)? And the prohibative pag-? (not yet included here)
+Prohibatives in general - the pag can be used in regular imperatives but MUST be used in the prohibative
+Full reduplication - can be iterative, distributive, diminutive, augmentative, facsimile
