@@ -1,0 +1,193 @@
+LEXICON Verbs
+Verb_Root ;
+< 0:{nag} "@U.VOICE.ACTOR@" > Verb_Root ;
+< 0:{naga} "@U.VOICE.ACTOR@" > Verb_Root ;
+< 0:{mag} "@U.VOICE.ACTOR@" > Verb_Root ;
+< 0:{maga} "@U.VOICE.ACTOR@" > Verb_Root ;
+< 0:{gin} "@U.VOICE.OBJECT@" > Verb_Root ;
+< 0:{gina} "@U.VOICE.OBJECT@" > Verb_Root ;
+< 0:{paga} "@U.VOICE.OBJECT@" > Verb_Root ;
+< 0:{gin} "@U.VOICE.INSTRUMENTAL@" > Verb_Root ;
+< 0:{gina} "@U.VOICE.INSTRUMENTAL@" > Verb_Root ;
+< 0:{i} "@U.VOICE.INSTRUMENTAL@" > Verb_Root ;
+< 0:{iga} "@U.VOICE.INSTRUMENTAL@" > Verb_Root ;
+< 0:{gin} "@U.VOICE.RECIPIENT@" > Verb_Root ;
+< 0:{gina} "@U.VOICE.RECIPIENT@" > Verb_Root ;
+< 0:{paga} "@U.VOICE.RECIPIENT@" > Verb_Root ;
+
+
+
+LEXICON Verbs
+Verb_Root ;
+@U.VOICE.ACTOR@ Actor_Voice ;
+@U.VOICE.OBJECT@ Object_Voice ;
+@U.VOICE.INSTRUMENTAL@ Instrumental_Voice ;
+@U.VOICE.RECIPIENT@ Recipient_Voice ;
+
+LEXICON Actor_Voice
+< 0:{nag} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{naga} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{mag} "@U.ASPECT.CTPL@" > Verb_Root ;
+< 0:{maga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Object_Voice
+< 0:{gin} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{gina} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{paga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Instrumental_Voice
+< 0:{gin} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{gina} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{i} "@U.ASPECT.CTPL@" > Verb_Root ;
+< 0:{iga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Recipient_Voice
+< 0:{gin} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{gina} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{paga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+
+
+
+
+!!One that kinda works
+
+LEXICON Verbs
+Verb_Root ;
+@U.VOICE.ACTOR@:@U.VOICE.ACTOR@ Actor_Voice ;
+@U.VOICE.OBJECT@:@U.VOICE.OBJECT@ Object_Voice ;
+@U.VOICE.INSTRUMENTAL@:@U.VOICE.INSTRUMENTAL@ Instrumental_Voice ;
+@U.VOICE.RECIPIENT@:@U.VOICE.RECIPIENT@ Recipient_Voice ;
+
+LEXICON Actor_Voice
+< 0:{nag} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{naga} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{mag} "@U.ASPECT.CTPL@" > Verb_Root ;
+< 0:{maga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Object_Voice
+< 0:{gin} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{gina} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{paga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Instrumental_Voice
+< 0:{gin} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{gina} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{i} "@U.ASPECT.CTPL@" > Verb_Root ;
+< 0:{iga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Recipient_Voice
+< 0:{gin} "@U.ASPECT.PFV@" > Verb_Root ;
+< 0:{gina} "@U.ASPECT.CONT@" > Verb_Root ;
+< 0:{paga} "@U.ASPECT.CTPLCONT@" > Verb_Root ;
+
+LEXICON Verb_Root
+hambal V "speak" ;
+basa V "read" ;
+tudlo V "teach" ;
+
+LEXICON V
++V+Ind Voice_Suffixes ;
++V+Imp: Imperative ;
+@U.VOICE.ACTOR@+V+Ind+ActV:@U.VOICE.ACTOR@ Aspect_Tags ;
+@U.VOICE.OBJECT@+V+Ind+ObjV:@U.VOICE.OBJECT@ Aspect_Tags ;
+@U.VOICE.INSTRUMENTAL@+V+Ind+InsV:@U.VOICE.INSTRUMENTAL@ Aspect_Tags ;
+@U.VOICE.RECIPIENT@+V+Ind+RecV:@U.VOICE.RECIPIENT@ Aspect_Tags ;
+
+LEXICON Aspect_Tags
+@U.ASPECT.PFV@+Pfv:@U.ASPECT.PFV@ Voice_Suffixes ;
+@U.ASPECT.CONT@+Cont:@U.ASPECT.CONT@ Voice_Suffixes ;
+@U.ASPECT.CTPL@+Ctpl:@U.ASPECT.CTPL@ Voice_Suffixes ;
+@U.ASPECT.CTPLCONT@+Ctpl+Cont:@U.ASPECT.CTPLCONT@ Voice_Suffixes ;
+
+LEXICON Imperative
+@U.VOICE.OFF@+ObjV:@U.VOICE.OFF@%>a # ;
+@U.VOICE.OFF@+RecV:@U.VOICE.OFF@%>i # ;
+
+LEXICON Voice_Suffixes
+@U.VOICE.OFF@+ObjV+Ctpl:@U.VOICE.OFF@%>on # ; !TODO Write rule to change morpheme boundary to h before vowel initial suffixes
+@U.VOICE.OFF@+RecV+Ctpl:@U.VOICE.OFF@%>an # ;
+@U.VOICE.ACTOR@:@U.VOICE.ACTOR@ V2 ;
+@U.VOICE.OBJECT@+Ctpl:@U.VOICE.OBJECT@%>on # ;
+@U.VOICE.INSTRUMENTAL@:@U.VOICE.INSTRUMENTAL@ # ;
+@U.VOICE.RECIPIENT@+Ctpl:@U.VOICE.RECIPIENT@%>an # ;
+
+LEXICON V2
++Recip:%>anay # ;
+
+
+
+
+
+!Turned in Version
+LEXICON Verbs
+< 0:{nag} "@U.VOICE.ACTOR1@" > Verb_Root ;
+< 0:{naga} "@U.VOICE.ACTOR2@" > Verb_Root ;
+< 0:{mag} "@U.VOICE.ACTOR3@" > Verb_Root ;
+< 0:{maga} "@U.VOICE.ACTOR4@" > Verb_Root ;
+< 0:{gin} "@U.VOICE.OBJECT1@" > Verb_Root ;
+< 0:{gina} "@U.VOICE.OBJECT2@" > Verb_Root ;
+< 0:0 "@U.VOICE.OBJECT3@" > Verb_Root ;
+< 0:{paga} "@U.VOICE.OBJECT4@" > Verb_Root ;
+< 0:{gin} "@U.VOICE.INSTRUMENTAL1@" > Verb_Root ;
+< 0:{gina} "@U.VOICE.INSTRUMENTAL2@" > Verb_Root ;
+< 0:{i} "@U.VOICE.INSTRUMENTAL3@" > Verb_Root ;
+< 0:{iga} "@U.VOICE.INSTRUMENTAL4@" > Verb_Root ;
+< 0:{gin} "@U.VOICE.RECIPIENT1@" > Verb_Root ;
+< 0:{gina} "@U.VOICE.RECIPIENT2@" > Verb_Root ;
+< 0:0 "@U.VOICE.RECIPIENT3@" > Verb_Root ;
+< 0:{paga} "@U.VOICE.RECIPIENT4@" > Verb_Root ;
+
+LEXICON Verb_Root
+hambal V "speak" ;
+basa V "read" ;
+
+LEXICON V
+@U.VOICE.ACTOR1@+V+Ind+ActV+Pfv:@U.VOICE.ACTOR1@ # ;
+@U.VOICE.ACTOR2@+V+Ind+ActV+Cont:@U.VOICE.ACTOR2@ # ;
+@U.VOICE.ACTOR3@+V+Ind+ActV+Ctpl:@U.VOICE.ACTOR3@ # ;
+@U.VOICE.ACTOR4@+V+Ind+ActV+Ctpl+Cont:@U.VOICE.ACTOR4@ # ;
+@U.VOICE.OBJECT1@+V+Ind+ObjV+Pfv:@U.VOICE.OBJECT1@ # ;
+@U.VOICE.OBJECT2@+V+Ind+ObjV+Cont:@U.VOICE.OBJECT2@ # ;
+@U.VOICE.OBJECT3@+V+Ind+ObjV+Ctpl:@U.VOICE.OBJECT3@%>on # ;
+@U.VOICE.OBJECT4@+V+Ind+ObjV+Ctpl+Cont:@U.VOICE.OBJECT4@%>on # ;
+@U.VOICE.INSTRUMENTAL1@+V+Ind+InsV+Pfv:@U.VOICE.INSTRUMENTAL1@ # ;
+@U.VOICE.INSTRUMENTAL2@+V+Ind+InsV+Cont:@U.VOICE.INSTRUMENTAL2@ # ;
+@U.VOICE.INSTRUMENTAL3@+V+Ind+InsV+Ctpl:@U.VOICE.INSTRUMENTAL3@ # ;
+@U.VOICE.INSTRUMENTAL4@+V+Ind+InsV+Ctpl+Cont:@U.VOICE.INSTRUMENTAL4@ # ;
+@U.VOICE.RECIPIENT1@+V+Ind+RecV+Pfv:@U.VOICE.RECIPIENT1@%>an # ;
+@U.VOICE.RECIPIENT2@+V+Ind+RecV+Cont:@U.VOICE.RECIPIENT2@%>an # ;
+@U.VOICE.RECIPIENT3@+V+Ind+RecV+Ctpl:@U.VOICE.RECIPIENT3@%>an # ;
+@U.VOICE.RECIPIENT4@+V+Ind+RecV+Ctpl+Cont:@U.VOICE.RECIPIENT4@%>an # ;
+
+!!€ hambal:    hambal+V+Ind+ActV+Pfv
+!!€ hambal:    hambal+V+Ind+ActV+Cont
+!!€ hambal:    hambal+V+Ind+ActV+Ctpl
+!!€ hambal:    hambal+V+Ind+ActV+Ctpl+Cont
+!!€ hambal:    hambal+V+Ind+ObjV+Pfv
+!!€ hambal:    hambal+V+Ind+ObjV+Cont
+!!€ hambal:    hambal+V+Ind+ObjV+Ctpl
+!!€ hambal:    hambal+V+Ind+ObjV+Ctpl+Cont
+!!€ hambal:    hambal+V+Ind+InsV+Pfv
+!!€ hambal:    hambal+V+Ind+InsV+Cont
+!!€ hambal:    hambal+V+Ind+InsV+Ctpl
+!!€ hambal:    hambal+V+Ind+InsV+Ctpl+Cont
+!!€ hambal:    hambal+V+Ind+RecV+Pfv
+!!€ hambal:    hambal+V+Ind+RecV+Cont
+!!€ hambal:    hambal+V+Ind+RecV+Ctpl
+!!€ hambal:    hambal+V+Ind+RecV+Ctpl+Cont
+
+!!$ hambal:    hambal+V+Ind+ActV+ObjV+Ctpl
+!!$ hambal:    hambal+V+Ind+ActV+InsV+Ctpl
+!!$ hambal:    hambal+V+Ind+ActV+RecV+Ctpl
+!!$ hambal:    hambal+V+Ind+ObjV+InsV+Ctpl
+!!$ hambal:    hambal+V+Ind+ObjV+RecV+Ctpl
+!!$ hambal:    hambal+V+Ind+InsV+RecV+Ctpl
+!!$ hambal:    hambal+V+Ind+ActV+Pfv+Cont
+!!$ hambal:    hambal+V+Ind+ActV+Pfv+Ctpl
+!!$ hambal:    hambal+V+Ind+ObjV+Pfv+Cont
+!!$ hambal:    hambal+V+Ind+ObjV+Pfv+Ctpl
+!!$ hambal:    hambal+V+Ind+InsV+Pfv+Cont
+!!$ hambal:    hambal+V+Ind+InsV+Pfv+Ctpl
+!!$ hambal:    hambal+V+Ind+RecV+Pfv+Cont
+!!$ hambal:    hambal+V+Ind+RecV+Pfv+Ctpl

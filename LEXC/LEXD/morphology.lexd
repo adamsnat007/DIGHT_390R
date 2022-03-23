@@ -1,0 +1,54 @@
+PATTERNS
+:VerbInfl(1) VerbRoot :VerbInfl(2) VerbInfl(1):
+:VerbInfl(1) :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Causative:
+:VerbInfl(1) :Habitual VerbRoot :VerbInfl(2) VerbInfl(1): Habitual:
+:VerbInfl(1) :Habitual :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Causative:
+:VerbInfl(1) :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Causative:
+:VerbInfl(1) :Habitual VerbRoot :VerbInfl(2) VerbInfl(1): Habitual:
+:VerbInfl(1) :Habitual :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Causative:
+:VerbInfl(1) :VerbRoot VerbRoot :VerbInfl(2) VerbInfl(1): Reduplication:
+:VerbInfl(1) :Habitual :VerbRoot VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Reduplication:
+:VerbInfl(1) :Habitual :Causative :VerbRoot VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Causative: Reduplication:
+
+LEXICON VerbRoot
+hatag
+
+LEXICON VerbInfl(2)
+<V><Inf>:                              :
+<V><Ger>:pag                           :
+<V><Ind><ActV><Real><Pfv>:nag          :
+<V><Ind><ActV><Real><Ipfv>:naga        :
+<V><Ind><ActV><Irr><Pfv>:mag           :
+<V><Ind><ActV><Irr><Ipfv>:maga         :
+<V><Ind><ObjV><Real><Pfv>:gin          :
+<V><Ind><ObjV><Real><Ipfv>:gina        :
+<V><Ind><ObjV><Irr><Pfv>:              :on
+<V><Ind><ObjV><Irr><Ipfv>:paga         :on
+<V><Ind><InsV><Real><Pfv>:gin          :
+<V><Ind><InsV><Real><Ipfv>:gina        :
+<V><Ind><InsV><Irr><Pfv>:i             :
+<V><Ind><InsV><Irr><Ipfv>:iga          :
+<V><Ind><RecV><Real><Pfv>:gin          :an
+<V><Ind><RecV><Real><Ipfv>:gina        :an
+<V><Ind><RecV><Irr><Pfv>:              :an
+<V><Ind><RecV><Irr><Ipfv>:paga         :an
+<V><Deo><ActV><Real>:naka              :
+<V><Deo><ActV><Irr>:maka               :
+<V><Deo><ObjV><Real>:na                :
+<V><Deo><ObjV><Irr>:ma                 :
+<V><Deo><InsV><Real>:na                :
+<V><Deo><InsV><Irr>:ma                 :
+<V><Deo><RecV><Real>:na                :an
+<V><Deo><RecV><Irr>:ma                 :an
+
+LEXICON Habitual
+<Hab>:pang
+
+LEXICON Causative
+<Caus>:pa
+
+LEXICON Reduplication
+<Aug>:
+<Dim>:
+<Distr>:
+<Iter>:

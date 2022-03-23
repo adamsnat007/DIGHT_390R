@@ -1,0 +1,23 @@
+LEXICON Adj_Prefix
+@U.ADJ.PRE@:@U.ADJ.PRE@ma Adj_Root ;
+@U.ADJ.CIR@:@U.ADJ.CIR@ma Adj_Root ;
+
+LEXICON Adj_Root
+lipay Adj "happy" ;
+subo Adj "sad" ;
+akig Adj "angry" ;
+dasig Adj "fast" ;
+hinay Adj "slow" ;
+dako Adj "big" ;
+gamay Adj "small" ;
+damo Adj "many" ;
+diutay Adj "few" ;
+
+LEXICON Adj
+Adj_Suffix ;
+@U.ADJ.PRE@+Adj:@U.ADJ.PRE@ # ;
+
+LEXICON Adj_Suffix
++Adj:%>on # ;
+
+!TODO create in infix

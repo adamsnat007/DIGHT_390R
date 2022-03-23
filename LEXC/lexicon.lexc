@@ -1,0 +1,86 @@
+Multichar_Symbols
++Purp   @P.PREFIX.pang@     @R.PREFIX.pang@    @U.PREFIX.pang@      @D.PREFIX.pang@
++Sup    @P.PREFIX.pinaka@   @R.PREFIX.pinaka@  @U.PREFIX.pinaka@
+@U.PREFIX.PRESENT@
+@U.PREFIX.ABSENT@
+@U.PANG.PRESENT@
+@U.PANG.ABSENT@
+@U.PREFIX.NONE@
+@U.PREFIX.pang@
+@U.PREFIX.nag@
+
+
+!Parts of Speech
++V +N +Adj
+!Adjective Tags
+@U.ADJ.PRE@ !Adjective prefix
+@U.ADJ.CIR@ !Adjective circumfix
+!Verb Tags
++ActV @U.VOICE.ACT@ !Actor voice
++ObjV @U.VOICE.OBJ@ !Object voice
++InsV @U.VOICE.INS@ !Instrumental voice
++RecV @U.VOICE.REC@ !Recipient voice
++Recip !Reciprocal
++Imp !Imperative mood
++Ind !Indicative mood
++Pfv @U.ASPECT.PFV@ !Perfective aspect
++Cont @U.ASPECT.CON@ !Continuous aspect
++Ctpl @U.ASPECT.CTP@ !Contemplative aspect
+@U.ASPECT.CTC@ !Contemplative continuous aspect
+!Pronoun Tags
++1sg !1st person singular
++2sg !2nd person singular
++3sg !3rd person singular
++1pl !1st person plural
++2pl !2nd person plural
++3pl !3rd person plural
++Incl !Inclusive
++Excl !Exclusive
+!Article Tags
++Nom !Nominative
++Obl !Oblique
++Loc !Locative
++Lig !Ligiture
++Pl !Plural
++Pers !Personal name
+
+LEXICON Root
+Morphology ;
+!Adj_Prefix ;
+!Articles ;
+!Noun_Root ;
+!Prep_Root ;
+!Pronouns ;
+!Punctuation ;
+
+LEXICON Morphology
+Prefixes ;
+@U.PREFIX.NONE@ Stems ;
+
+LEXICON Prefixes
+@U.PREFIX.pang@:@U.PREFIX.pang@pang Stems ;
+@U.PREFIX.nag@:@U.PREFIX.nag@nag    Stems ;
+
+LEXICON Stems
+hatag   Tags ;
+
+LEXICON Tags
+@U.PREFIX.pang@+Purp:@U.PREFIX.pang@    # ;
+@U.PREFIX.nag@+V:@U.PREFIX.nag@         # ;
+@U.PREFIX.NONE@ # ;
+
+
+
+!!LEXICON Morphology
+!!Prefixes ;
+!!Stems ;
+!!
+!!LEXICON Prefixes
+!!@P.PREFIX.pang@:@P.PREFIX.pang@pang Stems ;
+!!
+!!LEXICON Stems
+!!hatag   Tags ;
+!!
+!!LEXICON Tags
+!!@R.PREFIX.pang@+Purp:@R.PREFIX.pang@    # ;
+!!@D.PREFIX.pang@ # ;

@@ -1,0 +1,31 @@
+LEXICON Morphology
+Prefixes ;
+@U.PREFIX.NONE@ Stems ;
+
+LEXICON Prefixes
+@U.PREFIX.pang@:@U.PREFIX.pang@pang Stems ;
+@U.PREFIX.nag@:@U.PREFIX.nag@nag    Stems ;
+
+LEXICON Stems
+hatag   Tags ;
+
+LEXICON Tags
+@U.PREFIX.pang@+Purp:@U.PREFIX.pang@    # ;
+@U.PREFIX.nag@+V:@U.PREFIX.nag@         # ;
+@U.PREFIX.NONE@ # ;
+
+
+
+!!LEXICON Morphology
+!!Prefixes ;
+!!Stems ;
+!!
+!!LEXICON Prefixes
+!!@P.PREFIX.pang@:@P.PREFIX.pang@pang Stems ;
+!!
+!!LEXICON Stems
+!!hatag   Tags ;
+!!
+!!LEXICON Tags
+!!@R.PREFIX.pang@+Purp:@R.PREFIX.pang@    # ;
+!!@D.PREFIX.pang@ # ;
