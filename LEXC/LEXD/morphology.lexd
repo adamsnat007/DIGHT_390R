@@ -8,6 +8,7 @@ SeasonN
 Agentive1
 Agentive2
 Pre1
+VoiAsp
 
 PATTERN Infx
 Stem(1) :Infixes(1) :Infixes(2) Stem(2) Stem(3) Infixes:                                                                                        #Simple infixation
@@ -56,6 +57,15 @@ PATTERN Pre1
 :Prefix1 Agentive2 Prefix1:
 :Prefix1 SeasonN Prefix1:
 
+PATTERN VoiAsp
+:VoiceAspect(1) Stem(1) Stem(2) Stem(3) :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) DimRedup :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) Infx :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) Redup :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) Agentive1 :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) Agentive2 :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) SeasonN :VoiceAspect(2) VoiceAspect:
+:VoiceAspect(1) Pre1 :VoiceAspect(2) VoiceAspect:
 
 ###########################################################################
 
@@ -107,10 +117,7 @@ LEXICON Suffixes
 <Recip>:anay
 <Recip>:ay
 
-
-##########################################
-
-LEXICON VerbInfl(2)
+LEXICON VoiceAspect(2)
 <V><Inf>:                              :
 <V><Ger>:pag                           :
 <V><Ind><ActV><Real><Pfv>:nag          :
@@ -137,6 +144,8 @@ LEXICON VerbInfl(2)
 <V><Deo><InsV><Irr>:ma                 :
 <V><Deo><RecV><Real>:na                :an
 <V><Deo><RecV><Irr>:ma                 :an
+
+##########################################
 
 LEXICON Habitual
 <Hab>:pa{N}
