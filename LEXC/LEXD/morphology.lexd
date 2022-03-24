@@ -1,17 +1,41 @@
 PATTERNS
-:VerbInfl(1) VerbRoot :VerbInfl(2) VerbInfl(1):
-:VerbInfl(1) :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Causative:
-:VerbInfl(1) :Habitual VerbRoot :VerbInfl(2) VerbInfl(1): Habitual:
-:VerbInfl(1) :Habitual :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Causative:
-:VerbInfl(1) :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Causative:
-:VerbInfl(1) :Habitual VerbRoot :VerbInfl(2) VerbInfl(1): Habitual:
-:VerbInfl(1) :Habitual :Causative VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Causative:
-:VerbInfl(1) :VerbRoot VerbRoot :VerbInfl(2) VerbInfl(1): Reduplication:
-:VerbInfl(1) :Habitual :VerbRoot VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Reduplication:
-:VerbInfl(1) :Habitual :Causative :VerbRoot VerbRoot :VerbInfl(2) VerbInfl(1): Habitual: Causative: Reduplication:
+Infx
+Redup
 
-LEXICON VerbRoot
-hatag
+PATTERN Infx
+Stem(1) Stem(2) Stem(3)                                                                                                                         #Unaffixed root
+Stem(1) :Infixes Stem(2) Stem(3) Infixes:                                                                                                       #Simple infixation
+Stem(1) :Infixes Stem(2) Stem(3) :Stem(1) :Stem(2) :Stem(3) Infixes: Reduplication:                                                             #Simple infixation with reduplication
+Stem(1) Stem(2) :Redup_Infixes_1(1) :Stem(2) Stem(3) :Redup_Infixes_1(2) Redup_Infixes_1:                                                       #Instrumental infixation
+Stem(1) Stem(2) :Redup_Infixes_1(1) :Stem(2) Stem(3) :Stem(1) :Stem(2) :Stem(3) :Redup_Infixes_1(2) Redup_Infixes_1: Reduplication:             #Instrumental infixation with reduplication
+Stem(1) Stem(2) :Redup_Infixes_2(1) :Stem(2) :Redup_Infixes_2(2) :Stem(2) Stem(3) Redup_Infixes_2:                                              #Plural infixation
+Stem(1) Stem(2) :Redup_Infixes_2(1) :Stem(2) :Redup_Infixes_2(2) :Stem(2) Stem(3) :Stem(1) :Stem(2) :Stem(3) Redup_Infixes_2: Reduplication:    #Plural infixation with reduplication
+
+PATTERN Redup
+Stem(1) Stem(2) Stem(3)
+Stem(1) Stem(2) Stem(3) :Stem(1) :Stem(2) :Stem(3) Reduplication:
+
+LEXICON Stem(3)
+h a tag
+
+LEXICON Infixes
+<Ints>:in
+<Ptcp>:in
+<Ind><ActV><Real>:um
+
+LEXICON Redup_Infixes_1(2)
+<ActV><Ins><Nmlz>:l     :
+<ObjV><Ins><Nmlz>:l     :on
+<RecV><Ins><Nmlz>:l     :an
+
+LEXICON Redup_Infixes_2(2)
+<Pl>:l  :l
+
+LEXICON Reduplication
+<Aug>:
+<Dim>:
+<Distr>:
+<Iter>:
 
 LEXICON VerbInfl(2)
 <V><Inf>:                              :
@@ -47,8 +71,23 @@ LEXICON Habitual
 LEXICON Causative
 <Caus>:pa
 
-LEXICON Reduplication
-<Aug>:
-<Dim>:
-<Distr>:
-<Iter>:
+LEXICON Stative
+<Stat>:ka
+
+
+##  TODO: Figure out trisyllabic root reduplication (twolc)
+##  TODO: Infixes
+##  TODO: Stress change on reduplication?
+
+
+##  OLD PATTERNS
+#:VerbInfl(1) Stem :VerbInfl(2) VerbInfl(1):
+#:VerbInfl(1) :Causative Stem :VerbInfl(2) VerbInfl(1): Causative:
+#:VerbInfl(1) :Habitual Stem :VerbInfl(2) VerbInfl(1): Habitual:
+#:VerbInfl(1) :Habitual :Causative Stem :VerbInfl(2) VerbInfl(1): Habitual: Causative:
+#:VerbInfl(1) :Causative Stem :VerbInfl(2) VerbInfl(1): Causative:
+#:VerbInfl(1) :Habitual Stem :VerbInfl(2) VerbInfl(1): Habitual:
+#:VerbInfl(1) :Habitual :Causative Stem :VerbInfl(2) VerbInfl(1): Habitual: Causative:
+#:VerbInfl(1) :Stem Stem :VerbInfl(2) VerbInfl(1): Reduplication:
+#:VerbInfl(1) :Habitual :Stem Stem :VerbInfl(2) VerbInfl(1): Habitual: Reduplication:
+#:VerbInfl(1) :Habitual :Causative :Stem Stem :VerbInfl(2) VerbInfl(1): Habitual: Causative: Reduplication:
